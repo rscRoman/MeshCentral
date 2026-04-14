@@ -267,7 +267,7 @@ module.exports.CreateDB = function (parent, func) {
                                                     parent.DispatchEvent(targets, obj, event);
                                                 }
                                             } else if (i.startsWith('ugrp/')) {
-                                                var cusergroup = parent.userGroups[i];
+                                                var cusergroup = parent.webserver.userGroups[i];
                                                 if ((cusergroup != null) && (cusergroup.links != null) && (cusergroup.links[node._id] != null)) {
                                                     // Remove the user link & save the user
                                                     delete cusergroup.links[node._id];
